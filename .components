@@ -1,0 +1,9 @@
+---
+:orm: datamapper
+:test: rspec
+:mock: none
+:script: jquery
+:renderer: erb
+:stylesheet: none
+:namespace: Animals
+:migration_format: number
