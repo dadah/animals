@@ -1,3 +1,11 @@
+GIT
+  remote: git@github.com:dadah/sequel-geocoder.git
+  revision: ff54b6ee12c1d157db3ae7c04297ba39c83efd6d
+  specs:
+    sequel-geocoder (0.1.1)
+      geocoder
+      sequel
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -13,6 +21,7 @@ GEM
     diff-lcs (1.2.5)
     enumerable-lazy (0.0.1)
     erubis (2.7.0)
+    geocoder (1.2.12)
     i18n (0.7.0)
     json (1.8.3)
     mail (2.5.4)
@@ -73,6 +82,7 @@ GEM
     rack-test (0.6.3)
       rack (>= 1.0)
     rake (10.4.2)
+    redis (3.2.2)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -620,6 +630,8 @@ DEPENDENCIES
   pry-byebug
   rack-test
   rake
+  redis
   rspec
   sequel
+  sequel-geocoder!
   sequel_enum

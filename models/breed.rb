@@ -1,6 +1,7 @@
 class Breed < Sequel::Model
 
   many_to_one :species
+  one_to_many :pets
   plugin :validation_helpers
 
   def validate
