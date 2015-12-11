@@ -17,15 +17,11 @@ source 'https://rubygems.org'
 gem 'rake'
 
 # Component requirements
+gem 'bcrypt'
 gem 'erubis', '~> 2.7.0'
-gem 'dm-sqlite-adapter'
-gem 'dm-validations'
-gem 'dm-timestamps'
-gem 'dm-migrations'
-gem 'dm-constraints'
-gem 'dm-aggregates'
-gem 'dm-types'
-gem 'dm-core'
+gem 'pg'
+gem 'sequel'
+gem 'sequel_enum'
 
 # Test requirements
 gem 'rspec', :group => 'test'
@@ -34,6 +30,7 @@ gem 'rack-test', :require => 'rack/test', :group => 'test'
 # Padrino Stable Gem
 gem 'padrino', '0.13.0'
 
+gem 'pry-byebug'
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
 

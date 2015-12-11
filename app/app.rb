@@ -1,6 +1,5 @@
 module Animals
   class App < Padrino::Application
-    use IdentityMap
     register Padrino::Mailer
     register Padrino::Helpers
 
