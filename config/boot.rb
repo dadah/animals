@@ -5,11 +5,11 @@ PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
 # Load our dependencies
 require 'bundler/setup'
 Bundler.require(:default, RACK_ENV)
-
+require 'geocoder'
 ##
 # ## Enable devel logging
 #
-# Padrino::Logger::Config[:development][:log_level]  = :devel
+Padrino::Logger::Config[:development][:log_level]  = :devel
 # Padrino::Logger::Config[:development][:log_static] = true
 #
 # ## Enable logging of source location
@@ -38,12 +38,26 @@ Bundler.require(:default, RACK_ENV)
 # Add your before (RE)load hooks here
 #
 Padrino.before_load do
+  Geocoder.configure(
+
+    # geocoding service (see below for supported options):
+    lookup: :nominatim,
+
+    # geocoding service request timeout, in seconds (default 3):
+    timeout: 5,
+
+    # set default units to kilometers:
+    units: :km,
+
+    # caching (see below for details):
+    cache: Redis.new,
+    cache_prefix: "Animals",
+
+    http_headers: { "User-Agent" => "fthemudo@gmail.com" }
+  )
 end
 
 ##
 # Add your after (RE)load hooks here
 #
-Padrino.after_load do
-end
-
 Padrino.load!
