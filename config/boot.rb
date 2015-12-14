@@ -9,7 +9,7 @@ require 'geocoder'
 ##
 # ## Enable devel logging
 #
-# Padrino::Logger::Config[:development][:log_level]  = :devel
+Padrino::Logger::Config[:development][:log_level]  = :devel
 # Padrino::Logger::Config[:development][:log_static] = true
 #
 # ## Enable logging of source location
@@ -54,14 +54,10 @@ Padrino.before_load do
     cache_prefix: "Animals",
 
     http_headers: { "User-Agent" => "fthemudo@gmail.com" }
-
   )
 end
 
 ##
 # Add your after (RE)load hooks here
 #
-Padrino.after_load do
-end
-
 Padrino.load!
