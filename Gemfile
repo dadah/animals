@@ -24,7 +24,7 @@ gem 'sequel'
 gem 'sequel_enum'
 gem 'sequel-geocoder', git: 'git@github.com:dadah/sequel-geocoder.git', require: 'sequel-geocoder'
 gem 'redis'
-
+gem 'grape'
 # Test requirements
 gem 'rspec', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'

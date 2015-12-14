@@ -35,4 +35,5 @@ end
 # Mounts the core application for this project
 
 Padrino.mount("Animals::Admin", :app_file => Padrino.root('admin/app.rb')).to("/admin")
+Padrino.mount('Animals::Api', :app_file => Padrino.root('app/api.rb')).to('/').host(/api.*/)
 Padrino.mount('Animals::App', :app_file => Padrino.root('app/app.rb')).to('/')
